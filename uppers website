@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imonuppers</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        .background-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 5em;
+            color: rgba(0, 0, 0, 0.1);
+            z-index: -1;
+            user-select: none;
+        }
+        .surprise {
+            margin-top: 20px;
+            font-size: 1.5em;
+            color: #333;
+            animation: fadeIn 2s ease-in-out;
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+        .button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1em;
+            color: #fff;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="background-text">imonuppers</div>
+    <h1>Welcome to the Imonuppers Page!</h1>
+    <p class="surprise">Here's your surprise element!</p>
+    <button class="button" onclick="displaySurprise()">Click me for a surprise!</button>
+
+    <script>
+        function displaySurprise() {
+            const surpriseMessage = document.createElement('p');
+            surpriseMessage.textContent = "Surprise! You've just discovered a hidden message!";
+            surpriseMessage.style.fontSize = '1.2em';
+            surpriseMessage.style.color = '#28a745';
+            document.body.appendChild(surpriseMessage);
+        }
+    </script>
+</body>
+</html>
